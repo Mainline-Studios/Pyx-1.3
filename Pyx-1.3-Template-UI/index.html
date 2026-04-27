@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pyx 1.3 — Local AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>Pyx 1.3 <span class="badge">local</span></h1>
+      <p>
+        Chat runs on your machine via <strong>Pyx-AI-Downloadable</strong>. Optional web search feeds the model context;
+        answers are still <strong>generated text</strong>.
+      </p>
+    </header>
+
+    <div class="toolbar">
+      <label><input type="checkbox" id="useWeb" /> Web search</label>
+      <label><input type="checkbox" id="useWebAuto" checked /> Auto web</label>
+      <label><input type="checkbox" id="useStream" checked /> Stream</label>
+      <label>Temp <input type="number" id="temperature" value="0.7" min="0.1" max="1.5" step="0.1" /></label>
+      <label>Tokens <input type="number" id="maxTokens" value="512" min="64" max="4096" step="64" /></label>
+      <button type="button" id="btnReset" class="secondary">Reset chat</button>
+      <button type="button" id="btnExport" class="secondary">Export JSON</button>
+    </div>
+
+    <div id="log" aria-live="polite"></div>
+
+    <div class="composer">
+      <textarea id="input" placeholder="Message…" aria-label="Message"></textarea>
+      <div class="row-send">
+        <button type="button" id="send">Send</button>
+        <span id="status"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

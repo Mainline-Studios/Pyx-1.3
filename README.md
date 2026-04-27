@@ -1,40 +1,36 @@
-# Pyx 1.3 (Starter)
+# Pyx 1.3
 
-Pyx 1.3 is a separate starter kit for building UI + AI features into your own app.
+**Local-first AI starter** — no Groq, no cloud API keys. You run a **GGUF** model on your own hardware and optionally ground answers with **DuckDuckGo HTML** search (no search API key). The assistant always responds with **generated text**; web results are context only.
 
-## Download ZIP
+## What’s in this repo
 
-- [Download ZIP](https://github.com/Mainline-Studios/Pyx-1.3/archive/refs/heads/main.zip)
-
-## What this repo is
-
-- A minimal, clean starting point.
-- Drop-in UI files (`ui/`) for a simple "ask AI" panel.
-- A tiny client helper (`src/pyx13-client.js`) you can copy into your codebase.
-- No local Llama / OSS runtime in this starter.
+| Folder | Purpose |
+|--------|---------|
+| **`Pyx-AI-Downloadable/`** | Python server: chat API, session memory, web snippets → model, streaming. |
+| **`Pyx-1.3-Template-UI/`** | Ready-made browser UI (optional). |
 
 ## Quick start
 
-1. Open `ui/index.html`.
-2. Set your API base URL in `src/pyx13-config.js`.
-3. Wire the client into your own project.
+1. **Download a GGUF** chat model (your choice) and note the path.
+2. **Install & run the server** — see [Pyx-AI-Downloadable/README.md](Pyx-AI-Downloadable/README.md).
+3. **Optional UI** — see [Pyx-1.3-Template-UI/README.md](Pyx-1.3-Template-UI/README.md).
 
-## Integrate into existing app
+## ZIP download
 
-Copy these pieces:
+- [Download repository ZIP](https://github.com/Mainline-Studios/Pyx-1.3/archive/refs/heads/main.zip)
 
-- `src/pyx13-client.js`
-- `src/pyx13-config.js`
-- optional UI: `ui/pyx13-widget.css` and `ui/pyx13-widget.js`
+Copy `Pyx-AI-Downloadable/` into your project, add your own UI, or use the template.
 
-Then mount the widget:
+## Requirements
 
-```html
-<div id="pyx13-widget"></div>
-<script type="module" src="./ui/pyx13-widget.js"></script>
-```
+- Python 3.10+
+- `llama-cpp-python` + a **.gguf** file (see downloadable README)
+- Internet only if you enable **web search** in the UI/API
 
-## Notes
+## Differences from Pyx 1.0 (pyx-ai site)
 
-- Current production site remains Pyx 1.0 cloud flows.
-- Pyx 1.3 implementation details will be added incrementally.
+The public **pyx-ai** site remains **Groq / cloud** Pyx 1.0. **Pyx 1.3** in this repo is **offline-capable** local inference only.
+
+## License
+
+Specify in your downstream project; starter code is provided as-is for integration.

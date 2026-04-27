@@ -1,0 +1,3 @@
+# Local inference (GGUF). Install wheels from https://github.com/abetlen/llama-cpp-python#installation if needed.
+llama-cpp-python>=0.2.90
+flask>=3.0.0
