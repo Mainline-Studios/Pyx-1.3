@@ -34,3 +34,6 @@ The public **pyx-ai** site remains **Groq / cloud** Pyx 1.0. **Pyx 1.3** in this
 ## License
 
 Specify in your downstream project; starter code is provided as-is for integration.
+
+## Source
+Yeah, it's open source. Duh.
